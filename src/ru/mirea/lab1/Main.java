@@ -1,7 +1,5 @@
 package ru.mirea.lab1;
 
-import ru.mirea.lab1.test.Tester;
-
 import java.util.Random;
 import java.util.Arrays;
 
@@ -23,11 +21,8 @@ public class Main {
         System.out.println();
 
         System.out.println("---- Task 5 ----");
-        System.out.print(task5(10));
+        System.out.println(task5(10));
 
-        System.out.println("\n--- Test class Dog ----");
-        Dog d1 = new Dog("Rex", 10, "red");
-        Tester.print(d1);
 
 
     }
@@ -123,4 +118,5 @@ public class Main {
         }
         return s;
     }
+
 }
