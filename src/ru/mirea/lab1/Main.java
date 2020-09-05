@@ -1,6 +1,6 @@
 package ru.mirea.lab1;
 
-import ru.mirea.lab1.test.Test;
+import ru.mirea.lab1.test.Tester;
 
 import java.util.Random;
 import java.util.Arrays;
@@ -23,11 +23,11 @@ public class Main {
         System.out.println();
 
         System.out.println("---- Task 5 ----");
-        task5(10);
+        System.out.print(task5(10));
 
         System.out.println("\n--- Test class Dog ----");
         Dog d1 = new Dog("Rex", 10, "red");
-        Test.print(d1);
+        Tester.print(d1);
 
 
     }
@@ -68,39 +68,59 @@ public class Main {
 
     public static void task2(String []args){
         for (String arg : args){
-            System.out.print(arg + " ");
+            System.out.println(arg + " ");
         }
     }
 
     public static void task3(int n){
         for(int i = 1; i <= n; i++){
-            System.out.print((float) 1/i + " ");
+            double s = 1. / i;
+            System.out.printf("%.2f ", s);
         }
     }
 
     public static void task4(int n){
         Random random = new Random();
-        int[] arr = new int[n];
+        int[] arrRandom = new int[n];
+
         for(int i = 0; i < n; i++){
-            arr[i] = random.nextInt(100);
+            arrRandom[i] = random.nextInt(100);
         }
-        System.out.print("Не отсортированный массив : ");
-        for (int e : arr){
+        System.out.println("Не отсортированный массив использован Random: ");
+        for (int e : arrRandom){
             System.out.print(e + " ");
         }
-        Arrays.sort(arr);
+        Arrays.sort(arrRandom);
         System.out.println();
-        System.out.print("Отсортированный массив : ");
-        for (int e : arr){
+        System.out.println("Отсортированный массив использован Random: ");
+        for (int e : arrRandom){
+            System.out.print(e + " ");
+        }
+        System.out.println();
+
+        int[] arrMathRdm = new int[n];
+
+        for(int i = 0; i < n; i++){
+            arrMathRdm[i] = (int)(Math.random() * 100);
+        }
+
+        System.out.println("Not sorted Math: ");
+        for (int e : arrMathRdm){
+            System.out.print(e + " ");
+        }
+        Arrays.sort(arrMathRdm);
+        System.out.println();
+        System.out.println("Sorted Math: ");
+        for (int e : arrMathRdm){
             System.out.print(e + " ");
         }
     }
 
-    public static void task5(int n){
+    public static int task5(int n){
         int s = 1;
-        for(int i = 1; i < n; i++){
+        for(int i = 1; i <= n; i++){
             s *= i;
         }
-        System.out.printf("n! = %d", s);
+        return s;
     }
 }
