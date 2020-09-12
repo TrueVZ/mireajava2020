@@ -2,14 +2,19 @@ package ru.mirea.lab3;
 
 public class Human {
     private Head head;
-    private Leg leg;
-    private Hand hand;
+    private Leg legL;
+    private Leg legR;
+    private Hand handL;
+    private Hand handR;
 
-    public Human(Leg leg, Head head, Hand hand){
-        this.leg = leg;
+    public Human(Head head, Leg legL, Leg legR, Hand handL, Hand handR) {
         this.head = head;
-        this.hand = hand;
+        this.legL = legL;
+        this.legR = legR;
+        this.handL = handL;
+        this.handR = handR;
     }
+
     public Head getHead() {
         return head;
     }
@@ -18,28 +23,46 @@ public class Human {
         this.head = head;
     }
 
-    public Leg getLeg() {
-        return leg;
+    public Leg getLegL() {
+        return legL;
     }
 
-    public void setLeg(Leg leg) {
-        this.leg = leg;
+    public void setLegL(Leg legL) {
+        this.legL = legL;
     }
 
-    public Hand getHand() {
-        return hand;
+    public Leg getLegR() {
+        return legR;
     }
 
-    public void setHand(Hand hand) {
-        this.hand = hand;
+    public void setLegR(Leg legR) {
+        this.legR = legR;
+    }
+
+    public Hand getHandL() {
+        return handL;
+    }
+
+    public void setHandL(Hand handL) {
+        this.handL = handL;
+    }
+
+    public Hand getHandR() {
+        return handR;
+    }
+
+    public void setHandR(Hand handR) {
+        this.handR = handR;
     }
 
     @Override
     public String toString() {
         return "Human{" +
                 "head=" + head +
-                ", leg=" + leg +
-                ", hand=" + hand +
+                ", legL=" + legL +
+                ", legR=" + legR +
+                ", handL=" + handL +
+                ", handR=" + handR +
                 '}';
     }
 }

@@ -7,10 +7,12 @@ import ru.mirea.lab3.Hand;
 
 public class HumanTest {
     public static void main(String[] args) {
-        Leg leg = new Leg(42);
-        Hand hand = new Hand("good");
+        Leg legR = new Leg(42);
+        Leg legL = new Leg(41);
+        Hand handR = new Hand("good");
+        Hand handL = new Hand("Not Good");
         Head head = new Head("black", "blue");
-        Human h = new Human(leg, head, hand);
+        Human h = new Human(head, legR, legL, handR, handL);
         System.out.println(h);
     }
 }
