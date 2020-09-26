@@ -1,0 +1,29 @@
+package ru.mirea.lab8.Image;
+
+import javax.imageio.IIOException;
+import javax.imageio.ImageIO;
+import javax.swing.*;
+import java.awt.*;
+import java.io.File;
+import java.io.IOException;
+
+public class ImageComp extends JComponent {
+    private Image image;
+
+    public ImageComp(String path){
+        try {
+            File f = new File(path);
+            System.out.println(path);
+            image = ImageIO.read(f);
+        } catch (IOException e){
+            e.printStackTrace();
+        }
+    }
+    public void paintComponent(Graphics g){
+        if (image == null) return;
+
+        g.drawImage(image, 50, 50, this);
+
+    }
+
+}
