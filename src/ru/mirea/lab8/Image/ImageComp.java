@@ -20,8 +20,6 @@ public class ImageComp extends JComponent {
         }
     }
     public void paintComponent(Graphics g){
-        if (image == null) return;
-
         g.drawImage(image, 50, 50, this);
 
     }

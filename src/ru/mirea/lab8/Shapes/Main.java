@@ -13,14 +13,14 @@ public class Main extends JFrame {
     public static int y = 20;
 
 
-    public static Color getRdmColor(){
+    public static Color randomColor(){
         int r = random.nextInt(256);
         int g = random.nextInt(256);
         int b = random.nextInt(256);
         return new Color(r, g, b);
     }
-    public static Shape getRandowShape(){
-        Color color = getRdmColor();
+    public static Shape randomShape(){
+        Color color = randomColor();
         int nx = x;
         int ny = y;
         if (x + 100 <= width - 100){
@@ -45,11 +45,11 @@ public class Main extends JFrame {
         super("Task 1");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setDefaultLookAndFeelDecorated(true);
-        JLayeredPane lp = getLayeredPane();
+        JLayeredPane pane = getLayeredPane();
         for (int i = 0; i < 20; i++){
-            Shape shape = getRandowShape();
+            Shape shape = randomShape();
             shape.setBounds(0, 0, width, height);
-            lp.add(shape);
+            pane.add(shape);
         }
         setSize(width, height);
         setVisible(true);

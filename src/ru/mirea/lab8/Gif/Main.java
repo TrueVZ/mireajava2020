@@ -9,15 +9,16 @@ import java.io.File;
 import java.io.IOException;
 
 public class Main {
-
-
-    private static String path = "/Users/valyazaikin/IdeaProjects/mirea/src/ru/mirea/lab8/Image/";
-    String[] imgs = {"Mirea1.png", "MIREA.png"};
-    private static String filepath = "/Users/valyazaikin/IdeaProjects/mirea/src/ru/mirea/lab8/Image/MIREA.png";
+    private static String path = "/Users/valyazaikin/IdeaProjects/mirea/src/ru/mirea/lab8/Gif/";
+    String[] imgs = {"1.png", "2.png", "3.png", "4.png", "5.png", "6.png", "7.png", "8.png", };
+    private static String filepath = "/Users/valyazaikin/IdeaProjects/mirea/src/ru/mirea/lab8/Gif/1.png";
     JFrame frame;
+
+
     public Main(){
         frame = new JFrame("Task 3");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultLookAndFeelDecorated(true);
         frame.setLayout(new BorderLayout());
         frame.setSize(800, 600);
         frame.add(new ImgPanel());
@@ -30,10 +31,10 @@ public class Main {
         int i = 0;
         while (true){
             filepath = path + imgs[i];
-            i = (i + 1) % 2;
+            i = (i + 1) % 8;
             System.out.println(i);
             try {
-                Thread.sleep(300);
+                Thread.sleep(500);
             } catch (Exception exc) {
                 exc.printStackTrace();
             }
@@ -41,7 +42,7 @@ public class Main {
         }
     }
 
-    public class ImgPanel extends JPanel{
+    public static class ImgPanel extends JPanel{
         private Image img;
 
         public void paintComponent(Graphics g){
