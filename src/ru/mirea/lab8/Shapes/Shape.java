@@ -20,8 +20,7 @@ public abstract class Shape extends JComponent {
         super.paint(g);
     }
 
-    @Override
-    public int getX() {
+    public int getCX() {
         return x;
     }
 
@@ -29,8 +28,7 @@ public abstract class Shape extends JComponent {
         this.x = x;
     }
 
-    @Override
-    public int getY() {
+    public int getCY() {
         return y;
     }
 

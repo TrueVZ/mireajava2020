@@ -13,7 +13,7 @@ public class Circle extends Shape {
     @Override
     public void paint(Graphics g){
         Graphics2D g2d = (Graphics2D) g;
-        Ellipse2D.Double circle = new Ellipse2D.Double(getX(), getY(), 2*radius, 2*radius);
+        Ellipse2D.Double circle = new Ellipse2D.Double(getCX(), getCY(), 2*radius, 2*radius);
         g2d.setColor(getColor());
         g2d.fill(circle);
     }

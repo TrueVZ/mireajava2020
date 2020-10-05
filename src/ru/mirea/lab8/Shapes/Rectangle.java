@@ -17,7 +17,7 @@ public class Rectangle extends Shape {
     public void paint(Graphics g){
         Graphics2D g2d = (Graphics2D) g;
         g2d.setColor(getColor());
-        g2d.fillRect(getX(), getY(), width, height);
+        g2d.fillRect(getCX(), getCY(), width, height);
 
     }
 }

@@ -34,7 +34,7 @@ public class Main {
             i = (i + 1) % 8;
             System.out.println(i);
             try {
-                Thread.sleep(500);
+
             } catch (Exception exc) {
                 exc.printStackTrace();
             }
