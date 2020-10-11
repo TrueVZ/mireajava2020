@@ -16,9 +16,6 @@ public class Main extends JFrame {
     private static final Random random = new Random();
     public static final int width = 800;
     public static final int height = 600;
-    public static int x = 10;
-    public static int y = 20;
-
 
     public static Color randomColor(){
         int r = random.nextInt(256);
@@ -50,7 +47,7 @@ public class Main extends JFrame {
 
     }
     public Main(){
-        super("Task 1");
+        super("Task 9   ");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setDefaultLookAndFeelDecorated(true);
         JLayeredPane pane = getLayeredPane();
