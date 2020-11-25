@@ -8,7 +8,7 @@ import java.util.List;
 public class Main {
 
     private static <T> List<T> arrayToList(T[] arr){
-        return Arrays.asList(arr); // Про реализацию ничего не сказано :)
+        return Arrays.asList(arr);
 
     }
 
