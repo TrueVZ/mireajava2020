@@ -33,7 +33,9 @@ public class Main {
         //2
         GenericArray<Integer> array = new GenericArray<>();
         array.setArr(arr);
+        //3
         System.out.println(array.get(2));
+        //4
         folderParse("/Users/valyazaikin/Desktop/");
 
 
